@@ -2,8 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Maybyte pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maybyte Dashboard</title>
+    <link href="{{ url_for('static', filename='dist/output.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="bg-gray-900 text-white min-h-screen font-mono">
+
+    <div class="p-6 max-w-4xl mx-auto">
+        
+        <header class="mb-8 flex justify-between items-center border-b border-gray-700 pb-4">
+            <h1 class="text-3xl font-bold text-emerald-400">Maybyte<span class="text-white">.sys</span></h1>
+            <div class="text-sm text-gray-400">Live Monitor</div>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-xl">
+                <h2 class="text-gray-400 text-sm uppercase tracking-wider mb-2">CPU Load</h2>
+                <div class="flex items-end gap-2">
+                    <span id="cpu-val" class="text-5xl font-bold text-white">0</span>
+                    <span class="text-xl text-emerald-500 mb-2">%</span>
+                </div>
+                <p id="status-msg" class="text-xs mt-2 text-gray-500">Menunggu data...</p>
+            </div>
+
+            <div class="bg-gray-800 rounded-lg p-6 border border-gray-700 shadow-xl">
+                <h2 class="text-gray-400 text-sm uppercase tracking-wider mb-2">Processor Info</h2>
+                <div class="space-y-2">
+                    <div class="flex justify-between border-b border-gray-700 py-2">
+                        <span>Physical Cores</span>
+                        <span id="core-val" class="font-bold text-blue-400">-</span>
+                    </div>
+                    <div class="flex justify-between py-2">
+                        <span>Threads</span>
+                        <span id="thread-val" class="font-bold text-purple-400">-</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </body>
 </html>
