@@ -1,7 +1,7 @@
 import psutil
 
 def ambil_data_cpu():
-	persentase_cpu = psutil.cpu_percent(interval=1)
+	persentase_cpu = psutil.cpu_percent(interval=None)
 	cpu_core = psutil.cpu_count(logical=False)
 	cpu_threads = psutil.cpu_count(logical=True)
 
