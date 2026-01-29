@@ -12,7 +12,7 @@ def get_size(bytes, suffix="B"):
 try:
     import psutil
 
-    MODE_REAL = True # change False to try mode data dummy on development
+    MODE_REAL = False # change False to try mode data dummy on development
 
 except ImportError:
 
