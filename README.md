@@ -141,13 +141,9 @@ maybyte-pro/
 
 6.  **Run the Application**
     
-    * **Linux/macOS:**
+    * **Linux/macOS/Windows:**
         ```bash
         honcho start
-        ```
-    * **Windows:**
-        ```powershell
-        .\tailwindcss.exe -i src/input.css -o static/dist/output.css --watch
         ```
 
 7.  **Access the site**
