@@ -69,7 +69,7 @@ maybyte-pro/
     
     1.  **Unduh file binary:**
         ```bash
-        curl -sLO [https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64](https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64)
+        curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-linux-x64
         ```
     2.  **Ganti nama file menjadi `tailwindcss`:**
         ```bash
@@ -90,7 +90,7 @@ maybyte-pro/
     
     1.  **Unduh file binary:**
         ```bash
-        curl -sLO [https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-arm64](https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-arm64)
+        curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-arm64
         ```
     2.  **Ganti nama file menjadi `tailwindcss`:**
         ```bash
@@ -111,7 +111,7 @@ maybyte-pro/
     
     1.  **Unduh file binary:**
         ```bash
-        curl -sLO [https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-x64](https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-x64)
+        curl -sLO https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-macos-x64
         ```
     2.  **Ganti nama file menjadi `tailwindcss`:**
         ```bash
@@ -132,7 +132,7 @@ maybyte-pro/
     
     1.  **Unduh file dan simpan sebagai `tailwindcss.exe`:**
         ```powershell
-        Invoke-WebRequest -Uri '[https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-windows-x64.exe](https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-windows-x64.exe)' -OutFile 'tailwindcss.exe'
+        Invoke-WebRequest -Uri 'https://github.com/tailwindlabs/tailwindcss/releases/download/v3.4.17/tailwindcss-windows-x64.exe' -OutFile 'tailwindcss.exe'
         ```
     2.  **Buat file konfigurasi:**
         ```powershell
@@ -140,26 +140,15 @@ maybyte-pro/
         ```
 
 6.  **Run the Application**
-
-    Karena kita menggunakan Tailwind Watcher, kamu perlu menjalankan dua proses secara bersamaan. Buka **dua terminal** berbeda:
-
-    **Terminal 1: Menjalankan Tailwind Watcher (CSS Builder)**
-    Biarkan terminal ini terbuka agar CSS selalu ter-update otomatis saat kamu mengedit HTML.
     
     * **Linux/macOS:**
         ```bash
-        ./tailwindcss -i src/input.css -o static/dist/output.css --watch
+        honcho start
         ```
     * **Windows:**
         ```powershell
         .\tailwindcss.exe -i src/input.css -o static/dist/output.css --watch
         ```
-
-    **Terminal 2: Menjalankan Flask Server (Backend)**
-    Gunakan terminal baru untuk menjalankan server Python.
-    ```bash
-    flask run
-    ```
 
 7.  **Access the site**
     Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000)
@@ -176,4 +165,4 @@ This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) f
 * **LinkedIn:** [Adnan Slamet Wibowo](https://linkedin.com/in/adnan-slamet-wibowo-73906035b)
 
 ---
-<p align="center">Made with ❤️ and ☕ in Indonesia</p>
+<p align="center">Made with ☕ in Indonesia</p>
