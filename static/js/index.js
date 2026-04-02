@@ -9,9 +9,9 @@ async function updateDashboard() {
         // let data = await response.json();
 
         const mayFetch = async (url, option = {} => {
-        const respon = await fetch(url, option);
+        const respone = await fetch(url, option);
 
-        if (!respone.ok) throw new Error(`HTTP Erorr Access: ${respon.status}`);
+        if (!respone.ok) throw new Error(`HTTP Erorr Access: ${respone.status}`);
 
         return respone.json();
       };
