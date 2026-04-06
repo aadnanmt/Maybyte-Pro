@@ -1,24 +1,15 @@
+// header
+import { Fetch } from './module/config.js';
 
-
-async function updateDashboard() {
+async function updateData() {
     try {
-        // request data server (be-python)
-        // let response = await fetch('/api/stats');
-
-        // change data server to  object js
-        // let data = await response.json();
-
-        const mayFetch = async (url, option = {} => {
-        const respone = await fetch(url, option);
-
-        if (!respone.ok) throw new Error(`HTTP Erorr Access: ${respone.status}`);
-
-        return respone.json();
-      };
-
-      mayFetch('/api/stats')
-        .then(data => console.log(data))
-        .catch(err => console.error(err));
+        const response = await fetch('/api/stats', Fetch);
+        
+        if (!response.ok) {
+            throw new Error(`HTTP Error: ${response.status}`);
+        }
+        
+        const data = await response.json();
 
         // change interface use DOM native js :>
 
@@ -26,7 +17,7 @@ async function updateDashboard() {
         document.getElementById('cpu-val').innerText = data.cpu;
         document.getElementById('cpu-msg').innerText = data.status_msg;
         document.getElementById('core-val').innerText = data.core;
-        document.getElementById('thread-val').innerText = data.cpu_thr>
+        document.getElementById('thread-val').innerText = data.cpu_threads;
 
         // Status Information
         document.getElementById('status-msg').innerText = data.status;
@@ -49,6 +40,6 @@ async function updateDashboard() {
     }
 }
 
-// running updateDashboard every 1 seconds, u can change :>
-setInterval(updateDashboard, 1000);
-updateDashboard();
+// running updateData every 1 seconds, u can change :>
+setInterval(updateData, 1000);
+updateData();
