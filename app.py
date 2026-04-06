@@ -1,7 +1,7 @@
 from flask import Flask, render_template, jsonify
 from flask_minify import Minify
 from backend.monitor import ambil_data_cpu
-from backend.security import validate_ajax_request
+from backend.security import validate_request
 
 app = Flask(__name__)
 Minify(app=app, html=True, js=True, cssless=True)
@@ -11,7 +11,7 @@ def index():
     return render_template('index.html')
 
 @app.route('/api/stats')
-@validate_ajax_request
+@validate_request
 def stats():
     data = ambil_data_cpu() 
     return jsonify(data)
